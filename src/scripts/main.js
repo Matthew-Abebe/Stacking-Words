@@ -2,16 +2,16 @@ let sentence = ["The", "walrus", "danced", "through", "the", "trees", "in", "the
 
 let buildMeUp = "";
 
-addExcitement = (theWordArray) => {
+addExcitement = (theWordArray, character) => {
     for (i = 0; i < theWordArray.length; i++) {
         if (i === 0 || i % 3 !== 0) {
             buildMeUp += theWordArray[i] + " ";
         }
         else if (i % 3 === 0) {
-            buildMeUp += theWordArray[i] + "!"
+            buildMeUp += theWordArray[i] + character
         }
     }
 }
 
-addExcitement(sentence);
+addExcitement(sentence, "?");
 console.log(buildMeUp);
